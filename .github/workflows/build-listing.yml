@@ -12,12 +12,60 @@ concurrency:
   group: build-package-list
   cancel-in-progress: false
 
+permissions:
+  contents: write
+
 jobs:
   build-listing:
-    uses: vrchat-community/package-list-action/.github/workflows/build-listing.yml@main
-    permissions:
-      contents: write
-    with:
-      packages: |
-        https://github.com/sizimityper/carwindow-shader
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate VPM listing
+        run: |
+          python3 << 'PYEOF'
+          import json, urllib.request
+          with open("source.json") as f:
+              source = json.load(f)
+          package_repos = ["sizimityper/carwindow-shader"]
+          packages = {}
+          for repo in package_repos:
+              url = f"https://api.github.com/repos/{repo}/releases"
+              req = urllib.request.Request(url, headers={"User-Agent": "VPM-Builder", "Authorization": "token ${{ secrets.GITHUB_TOKEN }}"})
+              with urllib.request.urlopen(req) as r:
+                  releases = json.loads(r.read())
+              for release in releases:
+                  zip_url = None
+                  for asset in release.get("assets", []):
+                      if asset["name"].endswith(".zip"):
+                          zip_url = asset["browser_download_url"]
+                          break
+                  if not zip_url:
+                      continue
+                  pkg_path = "Packages/com.sizimityper.carwindow-shader/package.json"
+                  raw_url = f"https://raw.githubusercontent.com/{repo}/{release["tag_name"]}/{pkg_path}"
+                  try:
+                      req2 = urllib.request.Request(raw_url, headers={"User-Agent": "VPM-Builder"})
+                      with urllib.request.urlopen(req2) as r2:
+                          pkg = json.loads(r2.read())
+                      pkg["url"] = zip_url
+                      name = pkg["name"]
+                      if name not in packages:
+                          packages[name] = {"versions": {}}
+                      packages[name]["versions"][pkg["version"]] = pkg
+                  except Exception as e:
+                      print(f"Error: {e}")
+          index = {**source, "packages": packages}
+          with open("index.json", "w", encoding="utf-8") as f:
+              json.dump(index, f, indent=2, ensure_ascii=False)
+          print("Done:", list(packages.keys()))
+          PYEOF
+
+      - name: Commit and push
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add index.json
+          git diff --staged --quiet || git commit -m "Update VPM package listing"
+          git push
