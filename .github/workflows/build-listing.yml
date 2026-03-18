@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   build-listing:
-    uses: vrchat-community/package-list-action/.github/workflows/build-listing.yml@v1
+    uses: vrchat-community/package-list-action/.github/workflows/build-listing.yml@main
     permissions:
       contents: write
     with:
