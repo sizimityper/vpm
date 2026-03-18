@@ -1,0 +1,11 @@
+{
+    "name": "sizimityperのVPMリポジトリ",
+    "id": "com.sizimityper.vpm",
+    "url": "https://sizimityper.github.io/vpm/index.json",
+    "author": "sizimityper",
+    "description": "sizimityperが作ったVRChat向けシェーダー/アセットのVPMリポジトリ",
+    "infoLink": {
+          "url": "https://github.com/sizimityper",
+          "text": "GitHubプロフィール"
+    }
+}
