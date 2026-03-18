@@ -1,0 +1,23 @@
+name: Build VPM Package Listing
+
+on:
+  repository_dispatch:
+      types:
+            - update-listing
+              workflow_dispatch: {}
+                schedule:
+                    - cron: '0 0 * * *'
+
+                    concurrency:
+                      group: build-package-list
+                        cancel-in-progress: false
+
+                        jobs:
+                          build-listing:
+                              uses: vrchat-community/package-list-action/.github/workflows/build-listing.yml@v1
+                                  permissions:
+                                        contents: write
+                                            with:
+                                                  packages: |
+                                                          https://github.com/sizimityper/carwindow-shader
+                                                              secrets: inherit
