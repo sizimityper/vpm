@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sizimityper_VPM</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .desc { color: #8b949e; margin-bottom: 2.5rem; }
+    .add-btn {
+      display: inline-block;
+      background: #238636;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.75rem 2rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: background 0.2s;
+      margin-bottom: 0.75rem;
+    }
+    .add-btn:hover { background: #2ea043; }
+    .url-hint { color: #8b949e; font-size: 0.85rem; margin-bottom: 3rem; }
+    .packages { width: 100%; max-width: 600px; }
+    .packages h2 { font-size: 1.1rem; color: #8b949e; margin-bottom: 1rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+    .package {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .package-name { font-weight: bold; }
+    .package-id { color: #8b949e; font-size: 0.8rem; margin-top: 0.2rem; }
+    .version {
+      background: #388bfd26;
+      color: #58a6ff;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+    footer { margin-top: 3rem; color: #8b949e; font-size: 0.8rem; }
+    footer a { color: #58a6ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>sizimityper_VPM</h1>
+  <p class="desc">VRChat向けシェーダー/アセットのVPMリポジトリ</p>
+
+  <a class="add-btn" href="vcc://vpm/addRepo?url=https://sizimityper.github.io/vpm/index.json">
+    ＋ VCCに追加する
+  </a>
+  <p class="url-hint">https://sizimityper.github.io/vpm/index.json</p>
+
+  <div class="packages">
+    <h2>パッケージ一覧</h2>
+    <div class="package">
+      <div>
+        <div class="package-name">sizimityper's car window shader</div>
+        <div class="package-id">com.sizimityper.carwindow-shader</div>
+      </div>
+      <span class="version">v1.0.1</span>
+    </div>
+  </div>
+
+  <footer>
+    <a href="https://github.com/sizimityper" target="_blank">@sizimityper</a> on GitHub
+  </footer>
+</body>
+</html>
