@@ -28,7 +28,10 @@ jobs:
           import json, urllib.request
           with open("source.json") as f:
               source = json.load(f)
-          package_repos = ["sizimityper/carwindow-shader"]
+          package_repos = [
+              "sizimityper/carwindow-shader",
+              "sizimityper/mesh-deformer"
+          ]
           packages = {}
           for repo in package_repos:
               url = f"https://api.github.com/repos/{repo}/releases"
@@ -43,8 +46,10 @@ jobs:
                           break
                   if not zip_url:
                       continue
-                  pkg_path = "Packages/com.sizimityper.carwindow-shader/package.json"
-                  raw_url = f"https://raw.githubusercontent.com/{repo}/{release["tag_name"]}/{pkg_path}"
+                  pkg_name = repo.split("/")[1]
+                  pkg_id = "com.sizimityper." + pkg_name.replace("-", "-")
+                  pkg_path = f"Packages/{pkg_id}/package.json"
+                  raw_url = f"https://raw.githubusercontent.com/{repo}/{release['tag_name']}/{pkg_path}"
                   try:
                       req2 = urllib.request.Request(raw_url, headers={"User-Agent": "VPM-Builder"})
                       with urllib.request.urlopen(req2) as r2:
