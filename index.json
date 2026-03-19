@@ -49,6 +49,21 @@
     },
     "com.sizimityper.mesh-deformer": {
       "versions": {
+        "1.0.1": {
+          "name": "com.sizimityper.mesh-deformer",
+          "displayName": "sizimityper's mesh deformer",
+          "version": "1.0.1",
+          "unity": "2019.4",
+          "description": "Mesh deformer editor extension by sizimityper",
+          "author": {
+            "name": "sizimityper",
+            "email": "sizimityper@gmail.com",
+            "url": "https://github.com/sizimityper"
+          },
+          "license": "MIT",
+          "vpmDependencies": {},
+          "url": "https://github.com/sizimityper/mesh-deformer/releases/download/v1.0.1/com.sizimityper.mesh-deformer-1.0.1.zip"
+        },
         "1.0.0": {
           "name": "com.sizimityper.mesh-deformer",
           "displayName": "sizimityper's mesh deformer",
