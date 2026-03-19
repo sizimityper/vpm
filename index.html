@@ -53,6 +53,7 @@
       padding: 0.2rem 0.6rem;
       border-radius: 20px;
       font-size: 0.85rem;
+      white-space: nowrap;
     }
     footer { margin-top: 3rem; color: #8b949e; font-size: 0.8rem; }
     footer a { color: #58a6ff; text-decoration: none; }
@@ -67,26 +68,53 @@
   </a>
   <p class="url-hint">https://sizimityper.github.io/vpm/index.json</p>
 
-  <div class="packages">
+  <div class="packages" id="packages">
     <h2>パッケージ一覧</h2>
-    <div class="package">
-      <div>
-        <div class="package-name">sizimityper's car window shader</div>
-        <div class="package-id">com.sizimityper.carwindow-shader</div>
-      </div>
-      <span class="version">v1.0.1</span>
-    </div>
-    <div class="package">
-      <div>
-        <div class="package-name">sizimityper's mesh deformer</div>
-        <div class="package-id">com.sizimityper.mesh-deformer</div>
-      </div>
-      <span class="version">Coming soon</span>
-    </div>
+    <div id="package-list"></div>
   </div>
 
   <footer>
     <a href="https://github.com/sizimityper" target="_blank">@sizimityper</a> on GitHub
   </footer>
+
+  <script>
+    fetch('index.json')
+      .then(r => r.json())
+      .then(data => {
+        const list = document.getElementById('package-list');
+        const pkgs = data.packages || {};
+        const entries = Object.entries(pkgs);
+        if (entries.length === 0) {
+          list.innerHTML = '<p style="color:#8b949e;font-size:0.9rem;">パッケージはまだありません</p>';
+          return;
+        }
+        entries.forEach(([id, pkg]) => {
+          const versions = Object.keys(pkg.versions || {});
+          if (versions.length === 0) return;
+          const latest = versions.sort((a, b) => {
+            const pa = a.split('.').map(Number);
+            const pb = b.split('.').map(Number);
+            for (let i = 0; i < 3; i++) {
+              if ((pa[i] || 0) !== (pb[i] || 0)) return (pb[i] || 0) - (pa[i] || 0);
+            }
+            return 0;
+          })[0];
+          const info = pkg.versions[latest];
+          const name = info.displayName || id;
+          const div = document.createElement('div');
+          div.className = 'package';
+          div.innerHTML =
+            '<div>' +
+              '<div class="package-name">' + name + '</div>' +
+              '<div class="package-id">' + id + '</div>' +
+            '</div>' +
+            '<span class="version">v' + latest + '</span>';
+          list.appendChild(div);
+        });
+      })
+      .catch(() => {
+        document.getElementById('packages').style.display = 'none';
+      });
+  </script>
 </body>
 </html>
