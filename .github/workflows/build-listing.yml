@@ -30,7 +30,8 @@ jobs:
               source = json.load(f)
           package_repos = [
               "sizimityper/carwindow-shader",
-              "sizimityper/mesh-deformer"
+              "sizimityper/mesh-deformer",
+              "sizimityper/reflector-shader"
           ]
           packages = {}
           for repo in package_repos:
