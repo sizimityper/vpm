@@ -27,40 +27,6 @@
           "license": "MIT",
           "url": "https://github.com/sizimityper/carwindow-shader/releases/download/0.1.1/com.sizimityper.carwindow-shader-0.1.1.zip",
           "vpmDependencies": {}
-        },
-        "1.0.1": {
-          "name": "com.sizimityper.carwindow-shader",
-          "displayName": "sizimityper's car window shader",
-          "version": "1.0.1",
-          "unity": "2019.4",
-          "description": "Car window shader by sizimityper",
-          "author": {
-            "name": "sizimityper",
-            "email": "sizimityper@gmail.com",
-            "url": "https://github.com/sizimityper"
-          },
-          "changelogUrl": "https://github.com/sizimityper/carwindow-shader/blob/main/CHANGELOG.md",
-          "documentationUrl": "https://github.com/sizimityper/carwindow-shader#readme",
-          "license": "MIT",
-          "url": "https://github.com/sizimityper/carwindow-shader/releases/download/v1.0.1/com.sizimityper.carwindow-shader-1.0.1.zip",
-          "vpmDependencies": {}
-        },
-        "1.0.0": {
-          "name": "com.sizimityper.carwindow-shader",
-          "displayName": "Car Window Shader",
-          "version": "1.0.0",
-          "unity": "2019.4",
-          "description": "Car window shader by sizimityper",
-          "author": {
-            "name": "sizimityper",
-            "email": "sizimityper@gmail.com",
-            "url": "https://github.com/sizimityper"
-          },
-          "changelogUrl": "https://github.com/sizimityper/carwindow-shader/blob/main/CHANGELOG.md",
-          "documentationUrl": "https://github.com/sizimityper/carwindow-shader#readme",
-          "license": "MIT",
-          "url": "https://github.com/sizimityper/carwindow-shader/releases/download/v1.0.0/com.sizimityper.carwindow-shader-1.0.0.zip",
-          "vpmDependencies": {}
         }
       }
     },
@@ -136,72 +102,6 @@
           "license": "MIT",
           "vpmDependencies": {},
           "url": "https://github.com/sizimityper/reflector-shader/releases/download/0.1.2/com.sizimityper.reflector-shader-0.1.2.zip"
-        },
-        "1.0.2": {
-          "name": "com.sizimityper.reflector-shader",
-          "displayName": "sizimityper's Reflector Shader",
-          "version": "1.0.2",
-          "unity": "2019.4",
-          "description": "VRChat向け反射板シェーダー / Reflective shader for VRChat avatars and worlds.",
-          "author": {
-            "name": "sizimityper",
-            "url": "https://github.com/sizimityper"
-          },
-          "keywords": [
-            "shader",
-            "reflection",
-            "vrchat",
-            "vpm"
-          ],
-          "changelogUrl": "https://github.com/sizimityper/reflector-shader/blob/main/CHANGELOG.md",
-          "documentationUrl": "https://github.com/sizimityper/reflector-shader#readme",
-          "license": "MIT",
-          "vpmDependencies": {},
-          "url": "https://github.com/sizimityper/reflector-shader/releases/download/1.0.2/com.sizimityper.reflector-shader-1.0.2.zip"
-        },
-        "1.0.1": {
-          "name": "com.sizimityper.reflector-shader",
-          "displayName": "sizimityper's Reflector Shader",
-          "version": "1.0.1",
-          "unity": "2019.4",
-          "description": "VRChat向け反射板シェーダー / Reflective shader for VRChat avatars and worlds.",
-          "author": {
-            "name": "sizimityper",
-            "url": "https://github.com/sizimityper"
-          },
-          "keywords": [
-            "shader",
-            "reflection",
-            "vrchat",
-            "vpm"
-          ],
-          "changelogUrl": "https://github.com/sizimityper/reflector-shader/blob/main/CHANGELOG.md",
-          "documentationUrl": "https://github.com/sizimityper/reflector-shader#readme",
-          "license": "MIT",
-          "vpmDependencies": {},
-          "url": "https://github.com/sizimityper/reflector-shader/releases/download/1.0.1/com.sizimityper.reflector-shader-1.0.1.zip"
-        },
-        "1.0.0": {
-          "name": "com.sizimityper.reflector-shader",
-          "displayName": "Reflector Shader",
-          "version": "1.0.0",
-          "unity": "2019.4",
-          "description": "VRChat向け反射板シェーダー / Reflective shader for VRChat avatars and worlds.",
-          "author": {
-            "name": "sizimityper",
-            "url": "https://github.com/sizimityper"
-          },
-          "keywords": [
-            "shader",
-            "reflection",
-            "vrchat",
-            "vpm"
-          ],
-          "changelogUrl": "https://github.com/sizimityper/reflector-shader/blob/main/CHANGELOG.md",
-          "documentationUrl": "https://github.com/sizimityper/reflector-shader#readme",
-          "license": "MIT",
-          "vpmDependencies": {},
-          "url": "https://github.com/sizimityper/reflector-shader/releases/download/1.0.0/com.sizimityper.reflector-shader-1.0.0.zip"
         }
       }
     }
