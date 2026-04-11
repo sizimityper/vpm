@@ -29,6 +29,23 @@
     },
     "com.sizimityper.carwindow-shader": {
       "versions": {
+        "0.1.2": {
+          "name": "com.sizimityper.carwindow-shader",
+          "displayName": "sizimityper car window shader",
+          "version": "0.1.2",
+          "unity": "2019.4",
+          "description": "Car window shader by sizimityper",
+          "author": {
+            "name": "sizimityper",
+            "email": "sizimityper@gmail.com",
+            "url": "https://github.com/sizimityper"
+          },
+          "changelogUrl": "https://github.com/sizimityper/carwindow-shader/blob/main/CHANGELOG.md",
+          "documentationUrl": "https://github.com/sizimityper/carwindow-shader#readme",
+          "license": "MIT",
+          "url": "https://github.com/sizimityper/carwindow-shader/releases/download/v0.1.2/com.sizimityper.carwindow-shader-0.1.2.zip",
+          "vpmDependencies": {}
+        },
         "0.1.1": {
           "name": "com.sizimityper.carwindow-shader",
           "displayName": "sizimityper's car window shader",
