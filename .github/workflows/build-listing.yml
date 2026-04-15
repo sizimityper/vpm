@@ -32,7 +32,8 @@ jobs:
               "sizimityper/blinking-led-shader",
               "sizimityper/carwindow-shader",
               "sizimityper/mesh-deformer",
-              "sizimityper/reflector-shader"
+              "sizimityper/reflector-shader",
+              "sizimityper/headlight-shader"
           ]
           packages = {}
           for repo in package_repos:
