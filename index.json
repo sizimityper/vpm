@@ -351,6 +351,21 @@
           "vpmDependencies": {},
           "url": "https://github.com/sizimityper/headlight-shader/releases/download/0.10.0/com.sizimityper.headlight-shader-0.10.0.zip"
         },
+        "0.9.0": {
+          "name": "com.sizimityper.headlight-shader",
+          "displayName": "sizimityper Headlight Shader",
+          "version": "0.9.0",
+          "unity": "2019.4",
+          "description": "VRChat BRP向け ヘッドライト インテリアマッピングシェーダー（レンズフルート屈折・リフレクター・バルブエミッション）by sizimityper",
+          "author": {
+            "name": "sizimityper",
+            "email": "sizimityper@gmail.com",
+            "url": "https://github.com/sizimityper"
+          },
+          "license": "MIT",
+          "vpmDependencies": {},
+          "url": "https://github.com/sizimityper/headlight-shader/releases/download/0.9.0/com.sizimityper.headlight-shader-0.9.0.zip"
+        },
         "0.8.0": {
           "name": "com.sizimityper.headlight-shader",
           "displayName": "sizimityper Headlight Shader",
@@ -380,6 +395,36 @@
           "license": "MIT",
           "vpmDependencies": {},
           "url": "https://github.com/sizimityper/headlight-shader/releases/download/0.7.0/com.sizimityper.headlight-shader-0.7.0.zip"
+        },
+        "0.6.2": {
+          "name": "com.sizimityper.headlight-shader",
+          "displayName": "sizimityper Headlight Shader",
+          "version": "0.6.2",
+          "unity": "2019.4",
+          "description": "VRChat BRP向け ヘッドライト インテリアマッピングシェーダー（レンズフルート屈折・リフレクター・バルブエミッション）by sizimityper",
+          "author": {
+            "name": "sizimityper",
+            "email": "sizimityper@gmail.com",
+            "url": "https://github.com/sizimityper"
+          },
+          "license": "MIT",
+          "vpmDependencies": {},
+          "url": "https://github.com/sizimityper/headlight-shader/releases/download/0.6.2/com.sizimityper.headlight-shader-0.6.2.zip"
+        },
+        "0.6.1": {
+          "name": "com.sizimityper.headlight-shader",
+          "displayName": "sizimityper Headlight Shader",
+          "version": "0.6.1",
+          "unity": "2019.4",
+          "description": "VRChat BRP向け ヘッドライト インテリアマッピングシェーダー（レンズフルート屈折・リフレクター・バルブエミッション）by sizimityper",
+          "author": {
+            "name": "sizimityper",
+            "email": "sizimityper@gmail.com",
+            "url": "https://github.com/sizimityper"
+          },
+          "license": "MIT",
+          "vpmDependencies": {},
+          "url": "https://github.com/sizimityper/headlight-shader/releases/download/0.6.1/com.sizimityper.headlight-shader-0.6.1.zip"
         },
         "0.6.0": {
           "name": "com.sizimityper.headlight-shader",
